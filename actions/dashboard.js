@@ -5,6 +5,7 @@ import { db } from "@/lib/prisma";
 import { request } from "@arcjet/next";
 import { revalidatePath } from "next/cache";
 import { checkUser } from "@/lib/checkUser";
+import { auth } from "@clerk/nextjs/server";
 
 const serializeTransaction = (obj) => {
   const serialized = { ...obj };
@@ -124,6 +125,8 @@ export async function createAccount(data) {
     revalidatePath("/dashboard");
     return { success: true, data: serializedAccount };
   } catch (error) {
+    // log full error for server-side diagnostics
+    console.error("createAccount error:", error);
     throw new Error(error.message);
   }
 }
