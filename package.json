@@ -9,11 +9,10 @@
     "start": "next start",
     "lint": "eslint",
     "postinstall": "prisma generate"
-
   },
   "dependencies": {
     "@arcjet/next": "^1.0.0-beta.17",
-    "@clerk/nextjs": "^6.36.5",
+    "@clerk/nextjs": "^6.39.1",
     "@google/generative-ai": "^0.21.0",
     "@hookform/resolvers": "^5.2.2",
     "@prisma/client": "^6.19.1",
@@ -43,7 +42,7 @@
     "recharts": "^3.6.0",
     "resend": "^6.9.2",
     "sonner": "^2.0.7",
-    "tailwind-merge": "^3.4.0",
+    "tailwind-merge": "^3.5.0",
     "vaul": "^1.1.2",
     "zod": "^4.3.5"
   },
