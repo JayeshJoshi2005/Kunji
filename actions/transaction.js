@@ -291,6 +291,9 @@ export async function scanReceipt(file) {
 function calculateNextRecurringDate(startDate, interval) {
   const date = new Date(startDate);
 
+  // Set to midnight before calculating next
+  date.setHours(0, 0, 0, 0);
+
   switch (interval) {
     case "DAILY":
       date.setDate(date.getDate() + 1);

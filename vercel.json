@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "app/api/inngest/route.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/api/inngest",
+      "destination": "/api/inngest"
+    }
+  ]
+}
